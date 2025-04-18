@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>رمز عبور</title>
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+      direction: rtl;
+    }
+    .panel {
+      background-color: white;
+      padding: 20px;
+      margin: 10px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 600px;
+    }
+    input {
+      margin: 5px 0;
+      padding: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #3498db;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    img {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="panel">
+    <h2>راهنما</h2>
+    <div class="panel">
+      <p>راهنما: برای بدست آوردن این کد ساده لازم است به این موارد دقت کنید.</p>
+      <ul>
+        <li>۱. گیم مورد علاقه مهرشاد (فقط اسم شخصیت)</li>
+        <li>۲. پای تخصصی سهرابی</li>
+        <li>۳. میزان علاقه سهرابی به مهرشاد (عدد نیست)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>رمز عبور</h2>
+    <input type="text" id="input1" placeholder="بخش اول">
+    <input type="text" id="input2" placeholder="بخش دوم">
+    <input type="text" id="input3" placeholder="بخش سوم">
+    <button onclick="checkPassword()">بررسی</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      var i1 = document.getElementById('input1').value.trim().toLowerCase();
+      var i2 = document.getElementById('input2').value.trim().toLowerCase();
+      var i3 = document.getElementById('input3').value.trim().toLowerCase();
+      var result = document.getElementById('result');
+
+      if (i1 === "poppy" && i2 === "چپ" && i3 === "بینهایت") {
+        result.innerHTML = '<img src="17450036295056417861080431753714.jpg" alt="Correct">';
+      } else {
+        result.innerHTML = "<p>بیشتر دقت کن مومن علی.</p>";
+      }
+    }
+  </script>
+
+</body>
+</html>
